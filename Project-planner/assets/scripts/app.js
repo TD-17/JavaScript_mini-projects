@@ -16,24 +16,28 @@ class Component {
     }
 
     attach() {
-        const tooltipElement = document.createElement('div');
-        tooltipElement.className='card';
-        tooltipElement.textContent='DUMMY!';
-        tooltipElement.addEventListener('click', this.closeTooltip);
-        this.element=tooltipElement;
-        document.body.append(tooltipElement);
+        document.body.append(this.element);
     }
 
 }
 
-class Tooltip {
+class Tooltip extends Component {
     constructor(closeNotifierFunction) {
         this.closeNotifier = closeNotifierFunction;
+        this.create();
     }
     closeTooltip = () => {
         this.detach();
         this.closeNotifier();
     };
+
+    create() {
+        const tooltipElement = document.createElement('div');
+        tooltipElement.className='card';
+        tooltipElement.textContent='DUMMY!';
+        tooltipElement.addEventListener('click', this.closeTooltip);
+        this.element=tooltipElement;
+    }
     
 }
 
