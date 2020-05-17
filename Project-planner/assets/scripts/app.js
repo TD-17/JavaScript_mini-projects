@@ -35,3 +35,12 @@ class ProjectList {
     }
 
 }
+
+class App{
+    static init() {
+        const activeProjectsList = new ProjectList('active');
+        const finishedProjectList = new ProjectList('finished');
+    }
+}
+
+App.init();
