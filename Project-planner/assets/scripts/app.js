@@ -10,7 +10,21 @@ class DOMHelper {
         destinationElement.append(element);
     }
 }
+class Component {
+    detach() {
+        this.element.remove();
+    }
 
+    attach() {
+        const tooltipElement = document.createElement('div');
+        tooltipElement.className='card';
+        tooltipElement.textContent='DUMMY!';
+        tooltipElement.addEventListener('click', this.closeTooltip);
+        this.element=tooltipElement;
+        document.body.append(tooltipElement);
+    }
+
+}
 
 class Tooltip {
     constructor(closeNotifierFunction) {
