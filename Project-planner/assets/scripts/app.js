@@ -25,7 +25,7 @@ class Component {
 
     attach() {
         this.hostElement.insertAdjacentElement(
-            this.insertBefore ? 'beforebegin' : 'beforeend',
+            this.insertBefore ? 'afterbegin' : 'beforeend',
             this.element
         );
     }
