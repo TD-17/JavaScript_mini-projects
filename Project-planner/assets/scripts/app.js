@@ -11,18 +11,30 @@ class DOMHelper {
     }
 }
 class Component {
+    constructor(hostElementId, insertBefore = false) {
+        if(hostElementId) {
+            this.hostElement = document.getElementById(hostElementId);
+        }else {
+            this.hostElement = document.body;
+        }
+        this.insertBefore = insertBefore;
+    }
     detach() {
         this.element.remove();
     }
 
     attach() {
-        document.body.append(this.element);
+        this.hostElement.insertAdjacentElement(
+            this.insertBefore ? 'beforebegin' : 'beforeend',
+            this.element
+        );
     }
 
 }
 
 class Tooltip extends Component {
     constructor(closeNotifierFunction) {
+        super();
         this.closeNotifier = closeNotifierFunction;
         this.create();
     }
