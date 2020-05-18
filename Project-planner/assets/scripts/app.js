@@ -8,6 +8,7 @@ class DOMHelper {
         const element = document.getElementById(elementId);
         const destinationElement = document.querySelector(newDestinationSelector);
         destinationElement.append(element);
+        element.scrollIntoView({behavior:'smooth'});
     }
 }
 class Component {
@@ -33,8 +34,8 @@ class Component {
 }
 
 class Tooltip extends Component {
-    constructor(closeNotifierFunction, text) {
-        super();
+    constructor(closeNotifierFunction, text, hostElementId) {
+        super(hostElementId);
         this.closeNotifier = closeNotifierFunction;
         this.text=text;
         this.create();
@@ -47,7 +48,11 @@ class Tooltip extends Component {
     create() {
         const tooltipElement = document.createElement('div');
         tooltipElement.className='card';
-        tooltipElement.textContent=this.text;
+        const tooltipTemplate = document.getElementById('tooltip');
+        const tooltipBody = document.importNode(tooltipTemplate.content,true);
+        tooltipBody.querySelector('p').textContent=this.text;
+        tooltipElement.append(tooltipBody);
+        console.log(this.hostElement.getBoundingClientRect());
         tooltipElement.addEventListener('click', this.closeTooltip);
         this.element=tooltipElement;
     }
@@ -70,7 +75,7 @@ class ProjectItem {
         const tooltipText = projectElement.dataset.extraInfo;
         const tooltip = new Tooltip(() => {
             this.hasActiveTooltip = false;
-        },tooltipText);
+        },tooltipText, this.id);
         tooltip.attach();
         this.hasActiveTooltip = true;
     }
@@ -130,6 +135,14 @@ class App{
         const finishedProjectsList = new ProjectList('finished');
         activeProjectsList.setSwitchHandlerFunction(finishedProjectsList.addProject.bind(finishedProjectsList));
         finishedProjectsList.setSwitchHandlerFunction(activeProjectsList.addProject.bind(activeProjectsList));
+        
+        setTimeout(this.startAnalytics, 3000);
+    }
+    static startAnalytics() {
+        const analyticsScript = document.createElement('script');
+        analyticsScript.src = 'assets/scripts/analytics.js';
+        analyticsScript.defer = true;
+        document.head.append(analyticsScript);
     }
 }
 
