@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p><b>Please Select the categories that interest your</b></p><br>
+    <form>
+        
+        <label for="movie">Movies</label>
+        <input type="checkbox" id="movie" value="Movie" onclick="myFunction()">
+        <select id="states" onchange="myFunction()" style="margin-left:2rem">
+          <option>Delhi</option>
+          <option >UP</option>
+          <option >HP</option>
+        </select> <br><br>
+        <label for="book">Books</label>
+        <input type="checkbox" id="book" value="Book" onclick="myFunction()" ><br><br>
+        <label for="vehicle3">Playing</label>
+        <input type="checkbox" id="play" value="Playing" onclick="myFunction()"><br><br>
+        <input type="text" id="select"  style="width: 20%;" >
+    </form>
+    
+    <script>
+        function myFunction()
+        {
+            let val=[];
+            let flag1=false;
+            let flag2=false;
+            text="You have Selected ";
+            const allInputs = document.getElementsByTagName("input");
+            for (let i = 0, max = allInputs.length; i < max; i++){
+               if (allInputs[i].type === 'checkbox')
+              {
+                  if(allInputs[i].checked === true)
+                  {
+                    flag1=true;
+                    val.push(allInputs[i]);
+                  }    
+              }
+            }
+            const terminal = document.getElementById("states");
+            if(terminal.selectedIndex>-1)
+            {
+                const selectedText = terminal.options[terminal.selectedIndex].text;
+                flag2=true;
+                val.push(selectedText);
+                console.log(selectedText);
+            }
+            if(flag1===true || flag2===true)
+            {
+                let i;
+                let max = val.length;
+                for(i = 0; i < max-1; i++)
+                {
+                     text= `${text}`+`${val[i].value}, `;
+                }
+                text= `${text}`+`${val[max-1]}`;
+                document.getElementById("select").value=text;
+                // console.log("hi");
+            }
+
+        }
+    </script>
+</body>
+</html>
