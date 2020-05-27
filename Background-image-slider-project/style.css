@@ -4,6 +4,7 @@
 }
 body{
     font-family: verdana, sans-serif;
+    background: #333;
 }
 .image-sliderfade
 {
@@ -23,6 +24,7 @@ img
     max-width: 1000px;
     position: relative;
     margin: auto;
+    margin-top: 7rem;
 }
 
 /* caption text */
@@ -60,7 +62,7 @@ img
 }
 .active
 {
-    border-color: #666;
+    border-color: black;
 }
 
 /* animation */
