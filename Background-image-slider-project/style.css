@@ -9,8 +9,11 @@ body{
 {
     display: none;
 }
-img{
+img
+{
     vertical-align: middle;
+    width:500px;
+    height: 500px;
 }
 
 /* slideshow container */
@@ -54,6 +57,10 @@ img{
     border-radius: 50%; 
     display: inline-block; 
     transition: border-color 0.6s ease; 
+}
+.active
+{
+    border-color: #666;
 }
 
 /* animation */
