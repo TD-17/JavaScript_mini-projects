@@ -31,7 +31,13 @@ function sendHttpRequest(method, url, data) {
   // });
 
   // return promise;
-  return fetch(url).then(response => {
+  return fetch(url,{
+    method: method,
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(response => {
     return response.json();
   });
 }
