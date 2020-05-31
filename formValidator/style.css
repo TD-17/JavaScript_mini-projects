@@ -28,7 +28,7 @@
 
  h2{
      text-align: center;
-     margin-bottom: 20px;
+     margin-bottom: 0 0 20px;
  }
 
  .form
@@ -74,7 +74,6 @@
  .form-control small{
      color: var(--error-color);
      position: absolute;
-     bottom: 0;
      left: 0;
      visibility: hidden;
  }
