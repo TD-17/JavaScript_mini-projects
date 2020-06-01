@@ -39,7 +39,7 @@
  .form-control
  {
      margin-bottom: 10px;
-     margin-bottom: 20px;
+     padding-bottom: 20px;
      position: relative;
  }
 
@@ -75,6 +75,7 @@
      color: var(--error-color);
      position: absolute;
      left: 0;
+     bottom: 0;
      visibility: hidden;
  }
 
