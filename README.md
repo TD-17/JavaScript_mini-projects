@@ -1,15 +1,18 @@
 # JavaScript_mini-projects
 Some mini JavaScript projects created during JavaScript tutorial.
 
-1. This is a simple "image slider project" with some css styling to make it look better.
+* This is a simple "image slider project" with some css styling to make it look better.
 
-2. HTTPRequest project is created with the concepts of sending get, post, delete requests, error handling.
+* In this "Exchange Rate Calculator project, fetch API is used to make a Http request to a third party API to get some exchange rate and 
+  then put that into the DOM.
 
-3. The concepts of object-oriented Programming is used in this project "Mini-Shop"
+* HTTPRequest project is created with the concepts of sending get, post, delete requests, error handling.
 
-4. "Movie-seat-booking" is the seat booking project in which user can select any seat for any movie with the help of UI. User will be           notified about the 
+* The concepts of object-oriented Programming is used in this project "Mini-Shop"
+
+* "Movie-seat-booking" is the seat booking project in which user can select any seat for any movie with the help of UI. User will be           notified about the 
     total price and number of seats booked by the user.
 
-5. This project "Project-planner" uses the concept of inheritance
+* This project "Project-planner" uses the concept of inheritance
 
-6. "formVlidator" is the form with some validations like correct email entry, correct password entry, etc. 
+* "formVlidator" is the form with some validations like correct email entry, correct password entry, etc. 
