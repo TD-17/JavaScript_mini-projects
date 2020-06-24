@@ -1,5 +1,5 @@
 # JavaScript_mini-projects
-Some mini JavaScript projects created during JavaScript tutorial.
+Some mini JavaScript projects created using JavaScript, CSS and HTML.
 
 * This is a simple "image slider project" with some css styling to make it look better.
 
