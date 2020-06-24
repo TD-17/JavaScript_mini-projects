@@ -10,8 +10,10 @@ Some mini JavaScript projects created during JavaScript tutorial.
 
 * The concepts of object-oriented Programming is used in this project "Mini-Shop"
 
-* "Movie-seat-booking" is the seat booking project in which user can select any seat for any movie with the help of UI. User will be           notified about the 
-    total price and number of seats booked by the user.
+* "Movie-seat-booking" is the seat booking project in which user can select any seat for any movie with the help of UI. User will be notified about the 
+   total price and number of seats booked by the user.
+    
+* "My landing page" is a simple project. Menu slider and modal is used in this project.
 
 * This project "Project-planner" uses the concept of inheritance
 
