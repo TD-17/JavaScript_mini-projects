@@ -1,0 +1,11 @@
+body{
+    background-color: #0b0024;
+    color: #fff;
+}
+
+.figure{
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
