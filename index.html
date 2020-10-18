@@ -19,14 +19,43 @@
           <line x1 = "20" y1 = "250" x2 = "100" y2 = "250" />
 
           <!-- man -->
-          <circle cx = "160" cy = "70" r = "20"/>
-          <line x1 = "160" y1 = "90" x2 = "160" y2 = "170" />
-          <line x1 = "160" y1 = "120" x2 = "180" y2 = "110" />
-          <line x1 = "140" y1 = "110" x2 = "160" y2 = "120" />
-          <line x1 = "160" y1 = "170" x2 = "180" y2 = "190" />
-          <line x1 = "140" y1 = "190" x2 = "160" y2 = "170" />
+          <div class="display-man">
+            <circle cx = "160" cy = "70" r = "20"/>
+            <line x1 = "160" y1 = "90" x2 = "160" y2 = "170" />
+            <line x1 = "160" y1 = "120" x2 = "180" y2 = "110" />
+            <line x1 = "140" y1 = "110" x2 = "160" y2 = "120" />
+            <line x1 = "160" y1 = "170" x2 = "180" y2 = "190" />
+            <line x1 = "140" y1 = "190" x2 = "160" y2 = "170" />
+          </div>
 
         </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+                <p>wrong</p>
+                <span>e,r,t,y</span>
+            </div>
+        </div>
+
+        <div class="word" id="word">
+            <div class="letter">h</div>
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div>
+        </div>
     </div>
+
+    <div class="popup-message" id="popup-message">
+        <div class="popup">
+            <h2 id="final-message">You have won</h2>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <p>You have already entered this letter</p>
+    </div>
+
 </body>
 </html>
