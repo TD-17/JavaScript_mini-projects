@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0f022c;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1
+{
+    margin: 20px 0 0;
+}
+
+.container
+{
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+}
+
+.figure{
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.display-man
+{
+    visibility: none;
+}
+
+.wrong-letters-container
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.wrong-letters-container p
+{
+    margin: 0 0 5px;
+}
+
+.wrong-letters-container span{
+    font-size: 24px;
+}
+
+.word
+{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter 
+{
+    border-bottom: 3px solid #0078bd;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+}
+
+.popup-message
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+     background: #5320c0;
+     border-radius: 5px;
+     box-shadow: 0 15px 3px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     text-align: center;
+}
+
+.popup button{
+    cursor: pointer;
+    background-color: #fff;
+    color: #5320c0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.popup button:active{
+    transform: scale(0.98);
+}
+
+.popup button:focus
+{
+    outline: 0;
+}
+
+.notification
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 20px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification p{
+    margin: 0;
+}
+
+.notification.show
+{
+    transform: translateY(-50px);
+}

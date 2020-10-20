@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="container">
+        <svg height = "250" width = "200" class="figure">
+
+          <!-- rod -->
+          <line x1 = "60" y1 = "20" x2 = "160" y2 = "20" />
+          <line x1 = "160" y1 = "20" x2 = "160" y2 = "50" /> 
+          <line x1 = "60" y1 = "20" x2 = "60" y2 = "250" />
+          <line x1 = "20" y1 = "250" x2 = "100" y2 = "250" />
+
+          <!-- man -->
+          <div class="display-man">
+            <circle cx = "160" cy = "70" r = "20" class = "figure-part" />
+            <line x1 = "160" y1 = "90" x2 = "160" y2 = "170" class = "figure-part" />
+            <line x1 = "160" y1 = "120" x2 = "180" y2 = "110" class = "figure-part" />
+            <line x1 = "140" y1 = "110" x2 = "160" y2 = "120" class = "figure-part" />
+            <line x1 = "160" y1 = "170" x2 = "180" y2 = "190" class = "figure-part" />
+            <line x1 = "140" y1 = "190" x2 = "160" y2 = "170" class = "figure-part" />
+          </div>
+
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+               
+            </div>
+        </div>
+
+        <div class="word" id="word">
+           
+        </div>
+    </div>
+
+    <div class="popup-message" id="popup-message">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+
+    <div class="notification " id="notification">
+        <p>You have already entered this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
