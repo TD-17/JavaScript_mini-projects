@@ -31,4 +31,44 @@ function displayWord() {
     }
 }
 
+// update wrong letter function
+function updateWrongLettersEl() {
+    console.log('Update wrong');
+}
+
+// show notification function
+function showNotification() {
+    notification.classList.add('show');
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 2000);
+}
+
+// letters
+window.addEventListener('keydown', e => {
+    console.log("Hello");
+    if(e.key >= 'a' && e.key <= 'z') {
+        const letter = e.key;
+
+        if(selectedWord.includes(letter)) {
+            if(!correctLetters.includes(letter)) {
+                correctLetters.push(letter);
+                displayWord();
+            } else {
+                showNotification();
+            }
+        }else 
+        {
+            if(!wrongLetters.includes(letter)) {
+                wrongLetters.push(letter);
+                updateWrongLettersEl();
+            }else 
+            {
+                showNotification();
+            }
+        }
+    }
+})
+
 displayWord();
