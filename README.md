@@ -7,6 +7,8 @@ Some mini JavaScript projects created during JavaScript tutorial.
 
 * In this "Exchange Rate Calculator project, fetch API is used to make a Http request to a third party API to get some exchange rate and 
   then put that into the DOM.
+  
+* "Hangman" is a word game where the goal is simply to find the missing word or words. We are presented with a number of blank spaces representing the missing letters we need to     find. If our chosen letter exists in the answer, then all places in the answer where that letter appear will be revealed. Be warned, every time we guess a letter wrong we loose   a life and the hangman begins to appear, piece by piece. Here SVG is used for creating the hangman.
 
 * HTTPRequest project is created with the concepts of sending get, post, delete requests, error handling.
 
